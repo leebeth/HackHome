@@ -20,6 +20,9 @@ namespace HackHome
     {
         public const string ID_DETAIL_LABORATORY = "IdDetail";
         public const string TOKEN = "token";
+        public const string TITTLE = "tittle";
+        public const string STATUS = "status";
+        public const string USERNAME = "username";
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -27,33 +30,38 @@ namespace HackHome
 
             SetContentView(Resource.Layout.DetailLaboratory);
 
-            InitComponents(Intent.GetIntExtra(ID_DETAIL_LABORATORY, 0), Intent.GetStringExtra(TOKEN));
+            InitComponents(Intent.GetIntExtra(ID_DETAIL_LABORATORY, 0), Intent.GetStringExtra(TOKEN),
+                Intent.GetStringExtra(TITTLE), Intent.GetStringExtra(STATUS), Intent.GetStringExtra(USERNAME));
         }
 
-        private async void InitComponents(int idEvidenceDetail, string token)
+        private async void InitComponents(int idEvidenceDetail, string token, string tittle, string status, string username)
         {
             ServiceClient service = new ServiceClient();
             EvidenceDetail detail = await service.GetEvidenceByIDAsync(token, idEvidenceDetail);
-            
+
+            #region Username
+            var usernameView = FindViewById<TextView>(Resource.Id.UserName);
+            usernameView.Text = username;
+            #endregion
 
             #region Tittle
-
+            var tittleView = FindViewById<TextView>(Resource.Id.ActivityName);
+            tittleView.Text = tittle;
             #endregion
 
             #region Status
-
+            var statusView = FindViewById<TextView>(Resource.Id.ActivityStatus);
+            statusView.Text = status;
             #endregion
 
             #region Description
             var DescriptionWebView = FindViewById<WebView>(Resource.Id.Descripcion);
-            string descriptionContent = "";
-            DescriptionWebView.LoadDataWithBaseURL(null, descriptionContent, "text/html", "uft-8", null);
+            DescriptionWebView.LoadDataWithBaseURL(null, detail.Description, "text/html", "uft-8", null);
             #endregion
 
             #region Image            
             var ImageEvidence = FindViewById<ImageView>(Resource.Id.ImageEvidence);
-            string urlImage = "";
-            Koush.UrlImageViewHelper.SetUrlDrawable(ImageEvidence, urlImage);
+            Koush.UrlImageViewHelper.SetUrlDrawable(ImageEvidence, detail.Url);
             #endregion
         }
     }
