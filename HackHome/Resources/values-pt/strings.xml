@@ -1,0 +1,5 @@
+<resources>
+  <string name="correo">E-mail:</string>
+  <string name="password">Senha:</string>
+  <string name="validar">Valicar:</string>
+</resources>

@@ -119,6 +119,9 @@ namespace HackHome
 			// aapt resource value: 0x7f040000
 			public const int Hello = 2130968576;
 			
+			// aapt resource value: 0x7f040005
+			public const int Validar = 2130968581;
+			
 			// aapt resource value: 0x7f040004
 			public const int correo = 2130968580;
 			
