@@ -3,6 +3,7 @@ using Android.Widget;
 using Android.OS;
 using HackAtHome.SAL;
 using HackAtHome.Entities;
+using System.Threading.Tasks;
 
 namespace HackHome
 {
@@ -18,15 +19,15 @@ namespace HackHome
             {
                 var studentEmail = FindViewById<EditText>(Resource.Id.editTextEmail).Text;
                 var Passwd = FindViewById<EditText>(Resource.Id.editTextPassword).Text;
-                string Token = Validate(studentEmail, Passwd);
+                Validate(studentEmail, Passwd);
 
             };
         }
-        private async string Validate(string studentEmail, string password)
+        private async void Validate(string studentEmail, string password)
         {
             var ServiceCliente = new ServiceClient();            
             ResultInfo Result = await ServiceCliente.AutenticateAsync(studentEmail,password);
-            return Result.Token;
+            var Token =  Result.Token;            
         }
     }
 }
