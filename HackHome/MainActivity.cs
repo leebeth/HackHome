@@ -1,6 +1,9 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
+using HackAtHome.SAL;
+using HackAtHome.Entities;
+using System.Threading.Tasks;
 
 namespace HackHome
 {
@@ -11,7 +14,20 @@ namespace HackHome
         {
             base.OnCreate(bundle);
             SetContentView (Resource.Layout.Main);
+            var ButtonValidate = FindViewById<Button>(Resource.Id.buttonValidate);
+            ButtonValidate.Click += (sender, e) =>
+            {
+                var studentEmail = FindViewById<EditText>(Resource.Id.editTextEmail).Text;
+                var Passwd = FindViewById<EditText>(Resource.Id.editTextPassword).Text;
+                Validate(studentEmail, Passwd);
 
+            };
+        }
+        private async void Validate(string studentEmail, string password)
+        {
+            var ServiceCliente = new ServiceClient();            
+            ResultInfo Result = await ServiceCliente.AutenticateAsync(studentEmail,password);
+            var Token =  Result.Token;            
         }
     }
 }

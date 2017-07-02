@@ -9,7 +9,6 @@ using Android.App;
 [assembly: AssemblyTitle("HackHome")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: Application(Theme = "@android:style/Theme.Holo")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("HackHome")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
