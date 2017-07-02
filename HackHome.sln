@@ -5,11 +5,11 @@ VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackHome.Android", "HackHome\HackHome.Android.csproj", "{ABE658BE-BBCD-483C-A2B3-15DD5D031BDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackAtHome.CustomAdapters", "..\..\..\Documents\Visual Studio 2017\Projects\hackathome-master\HackAtHome.CustomAdapters\HackAtHome.CustomAdapters.csproj", "{29A347BF-DA2D-4E3C-886A-2485883E9197}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackAtHome.CustomAdapters", "HackAtHome.CustomAdapters\HackAtHome.CustomAdapters.csproj", "{29A347BF-DA2D-4E3C-886A-2485883E9197}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackAtHome.Entities", "..\..\..\Documents\Visual Studio 2017\Projects\hackathome-master\HackAtHome.Entities\HackAtHome.Entities.csproj", "{02378702-6F7C-47F8-ACED-641B642C97FE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackAtHome.Entities", "HackAtHome.Entities\HackAtHome.Entities.csproj", "{02378702-6F7C-47F8-ACED-641B642C97FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackAtHome.SAL", "..\..\..\Documents\Visual Studio 2017\Projects\hackathome-master\HackAtHome.SAL\HackAtHome.SAL.csproj", "{112E4BD0-E1AA-486D-9EF7-29DAE72D6949}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackAtHome.SAL", "HackAtHome.SAL\HackAtHome.SAL.csproj", "{112E4BD0-E1AA-486D-9EF7-29DAE72D6949}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
