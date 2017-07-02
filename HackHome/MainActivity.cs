@@ -4,6 +4,8 @@ using Android.OS;
 using HackAtHome.SAL;
 using HackAtHome.Entities;
 using System.Threading.Tasks;
+using System.Collections.Generic;
+using Android.Content;
 
 namespace HackHome
 {
@@ -13,7 +15,7 @@ namespace HackHome
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            SetContentView (Resource.Layout.Main);
+            SetContentView(Resource.Layout.Main);
             var ButtonValidate = FindViewById<Button>(Resource.Id.buttonValidate);
             ButtonValidate.Click += (sender, e) =>
             {
@@ -25,10 +27,17 @@ namespace HackHome
         }
         private async void Validate(string studentEmail, string password)
         {
-            var ServiceCliente = new ServiceClient();            
-            ResultInfo Result = await ServiceCliente.AutenticateAsync(studentEmail,password);
-            var Token =  Result.Token;            
+            var ServiceCliente = new ServiceClient();
+            ResultInfo Result = await ServiceCliente.AutenticateAsync(studentEmail, password);
+            var Token = Result.Token;
+            var FullName = Result.FullName;
+            Intent Intent = new Intent(this, typeof(EvidenceListActivity));
+            Intent.PutExtra("token", Token);
+            Intent.PutExtra("fullName", FullName);
+            StartActivity(Intent);
         }
+
+
     }
 }
 

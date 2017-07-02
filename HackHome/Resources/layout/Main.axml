@@ -13,7 +13,8 @@
         android:inputType="textEmailAddress"
         android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="lorena_2328@hotmail.com" />
     <TextView
         android:text="@string/password"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -24,7 +25,8 @@
         android:inputType="textPassword"
         android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="smilers92" />
     <Button
         android:text="@string/validar"
         android:layout_width="wrap_content"

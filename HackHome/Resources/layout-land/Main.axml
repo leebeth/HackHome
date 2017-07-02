@@ -19,7 +19,8 @@
             android:inputType="textEmailAddress"
             android:id="@+id/editTextEmail"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:text="lorena_2328@hotmail.com" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
@@ -37,7 +38,8 @@
             android:inputType="textPassword"
             android:id="@+id/editTextPassword"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:text="smilers92" />
     </LinearLayout>
     <Button
         android:text="@string/validar"
