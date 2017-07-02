@@ -10,6 +10,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Webkit;
+using HackAtHome.SAL;
+using HackAtHome.Entities;
 
 namespace HackHome
 {
@@ -17,6 +19,7 @@ namespace HackHome
     public class DetailLaboratoryActivity : Activity
     {
         public const string ID_DETAIL_LABORATORY = "IdDetail";
+        public const string TOKEN = "token";
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -24,12 +27,13 @@ namespace HackHome
 
             SetContentView(Resource.Layout.DetailLaboratory);
 
-            InitComponents(Intent.GetStringExtra(ID_DETAIL_LABORATORY));
+            InitComponents(Intent.GetIntExtra(ID_DETAIL_LABORATORY, 0), Intent.GetStringExtra(TOKEN));
         }
 
-        private void InitComponents(string idEvidenceDetail)
+        private async void InitComponents(int idEvidenceDetail, string token)
         {
-
+            ServiceClient service = new ServiceClient();
+            EvidenceDetail detail = await service.GetEvidenceByIDAsync(token, idEvidenceDetail);
             
 
             #region Tittle
