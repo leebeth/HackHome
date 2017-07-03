@@ -56,6 +56,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Complex.cs" />
     <Compile Include="DetailLaboratoryActivity.cs" />
     <Compile Include="EvidenceListActivity.cs" />
     <Compile Include="MainActivity.cs" />

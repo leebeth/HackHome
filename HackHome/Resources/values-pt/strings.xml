@@ -1,7 +1,7 @@
 <resources>
   <string name="correo">E-mail:</string>
   <string name="password">Senha:</string>
-  <string name="validar">Valicar:</string>
-  <string name="descripcion">Descrição:</string>
-  <string name="evidencias">Evidência:</string>
+  <string name="validar">Valicar</string>
+  <string name="descripcion">Descrição</string>
+  <string name="evidencias">Evidências</string>
 </resources>

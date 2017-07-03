@@ -5,6 +5,6 @@
   <string name="validar">Validar</string>
   <string name="password">Contraseña:</string>
   <string name="correo">Correo:</string>
-  <string name="descripcion">Descripción:</string>
-  <string name="evidencias">Evidencias:</string>
+  <string name="descripcion">Descripción</string>
+  <string name="evidencias">Evidencias</string>
 </resources>
